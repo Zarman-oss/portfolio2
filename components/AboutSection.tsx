@@ -34,9 +34,9 @@ const AboutSection = () => {
     },
   };
 
-  const handledownload = () => {
-    toast('Downloading Resume');
-  };
+  // const handledownload = () => {
+  //   toast('Downloading Resume');
+  // };
 
   return (
     <section id='about' className='py-14 relative bg-background'>
@@ -202,7 +202,7 @@ const AboutSection = () => {
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.98 }}
             >
-              <Button className='gap-2' asChild onClick={handledownload}>
+              <Button className='gap-2' asChild>
                 <Link href={resumeUrl} download='Demo.pdf'>
                   <Download className='w-4 h-4' />
                   Download Resume
