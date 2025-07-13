@@ -71,7 +71,7 @@ const ContactSection = () => {
         <h2 className='section-heading'>Get In Touch</h2>
         <p className='text-muted-foreground max-w-2xl mb-12'>
           Have a question or want to work together? Feel free to drop me a
-          message. I\'d love to hear from you! {/* Escaped 'I'd' */}
+          message. I &apos;d love to hear from you! {/* Escaped 'I'd' */}
         </p>
 
         <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
@@ -81,8 +81,8 @@ const ContactSection = () => {
                 Contact Information
               </h3>
               <p className='text-muted-foreground'>
-                Fill up the form and I\'ll get back to you as soon as possible.{' '}
-                {/* Escaped 'I'll' */}
+                Fill up the form and I &apos; ll get back to you as soon as
+                possible.{' '}
               </p>
             </div>
 

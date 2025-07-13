@@ -1,9 +1,9 @@
 'use client';
-import { motion } from 'motion/react';
+import { motion, Variants } from 'motion/react';
 import { skillCategories } from '@/data/skills';
 
 const SkillsSection = () => {
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -13,7 +13,7 @@ const SkillsSection = () => {
     },
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
@@ -26,7 +26,7 @@ const SkillsSection = () => {
     },
   };
 
-  const skillItemVariants = {
+  const skillItemVariants: Variants = {
     hidden: { opacity: 0, scale: 0.8 },
     visible: {
       opacity: 1,
@@ -40,7 +40,7 @@ const SkillsSection = () => {
   };
 
   return (
-    <section id='skills' className=' bg-background'>
+    <section id='skills' className='bg-background'>
       <div className='section-container'>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -50,8 +50,8 @@ const SkillsSection = () => {
         >
           <h2 className='section-heading'>Skills</h2>
           <p className='text-muted-foreground max-w-2xl mb-12'>
-            I've worked with a range of technologies in the web development
-            world, from frontend to backend and everything in between.
+            I ve worked with a range of technologies in the web development
+            world, from frontend to backend and everything in between.{' '}
           </p>
         </motion.div>
 
@@ -62,7 +62,7 @@ const SkillsSection = () => {
           whileInView='visible'
           viewport={{ once: true, amount: 0.1 }}
         >
-          {skillCategories.map((category, index) => (
+          {skillCategories.map((category) => (
             <motion.div
               key={category.name}
               className='bg-card rounded-lg p-6 shadow-sm border border-border hover:border-primary/20 transition-colors'
@@ -78,7 +78,6 @@ const SkillsSection = () => {
                   whileHover={{ rotate: 5, scale: 1.1 }}
                   transition={{ type: 'spring', stiffness: 400, damping: 10 }}
                 >
-                  {/* Render the icon as a component with proper props */}
                   <category.icon className='h-5 w-5' />
                 </motion.div>
                 <h3 className='text-lg font-semibold'>{category.name}</h3>
