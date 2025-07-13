@@ -48,7 +48,7 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            Hello! I'm
+            Hello! I &apos m
           </motion.span>
 
           <motion.h1
@@ -213,7 +213,7 @@ const HeroSection = () => {
                 >
                   <span className='text-purple-600'>name</span>
                   <span className='text-gray-500'>:</span>{' '}
-                  <span className='text-green-600'>'John Doe'</span>
+                  <span className='text-green-600'>{'John Doe'}</span>
                   <span className='text-gray-500'>,</span>
                 </motion.div>
 
@@ -226,11 +226,11 @@ const HeroSection = () => {
                   <span className='text-purple-600'>skills</span>
                   <span className='text-gray-500'>:</span>{' '}
                   <span className='text-orange-500'>[</span>
-                  <span className='text-green-600'>'React'</span>
+                  <span className='text-green-600'>{'React'}</span>
                   <span className='text-gray-500'>,</span>{' '}
-                  <span className='text-green-600'>'Node.js'</span>
+                  <span className='text-green-600'>{'Node.js'}</span>
                   <span className='text-gray-500'>,</span>{' '}
-                  <span className='text-green-600'>'Python'</span>
+                  <span className='text-green-600'>{'Python'}</span>
                   <span className='text-orange-500'>]</span>
                   <span className='text-gray-500'>,</span>
                 </motion.div>
@@ -244,9 +244,9 @@ const HeroSection = () => {
                   <span className='text-purple-600'>focuses</span>
                   <span className='text-gray-500'>:</span>{' '}
                   <span className='text-orange-500'>[</span>
-                  <span className='text-green-600'>'Full-Stack'</span>
+                  <span className='text-green-600'>{'Full-Stack'}</span>
                   <span className='text-gray-500'>,</span>{' '}
-                  <span className='text-green-600'>'UI/UX'</span>
+                  <span className='text-green-600'>{'UI/UX'}</span>
                   <span className='text-orange-500'>]</span>
                   <span className='text-gray-500'>,</span>
                 </motion.div>
@@ -259,7 +259,7 @@ const HeroSection = () => {
                 >
                   <span className='text-purple-600'>learning</span>
                   <span className='text-gray-500'>:</span>{' '}
-                  <span className='text-green-600'>'Always'</span>
+                  <span className='text-green-600'>{'Always'}</span>
                 </motion.div>
 
                 <div>

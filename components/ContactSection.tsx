@@ -4,11 +4,10 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Github, Linkedin, Mail, MapPin, Phone } from 'lucide-react';
-// import { useToast } from '@/hooks/use-toast';
+import { toast } from 'sonner';
 import { Links } from '@/data/links';
 
 const ContactSection = () => {
-  //   const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -46,9 +45,8 @@ const ContactSection = () => {
 
       if (!response.ok) throw new Error(data.message || 'Submission failed');
 
-      toast({
-        title: 'Message Sent!',
-        description: "Thank you for your message. I'll get back to you soon.",
+      toast.success('Message Sent', {
+        description: 'Thank you for your message. Please wait.',
       });
 
       // Reset form
@@ -58,11 +56,9 @@ const ContactSection = () => {
         subject: '',
         message: '',
       });
-    } catch (error) {
-      toast({
-        title: 'Error',
-        description: error.message || 'Failed to send message',
-        variant: 'destructive',
+    } catch {
+      toast.error('Error', {
+        description: 'Failed to send message. Please try again.',
       });
     } finally {
       setIsSubmitting(false);
@@ -75,7 +71,7 @@ const ContactSection = () => {
         <h2 className='section-heading'>Get In Touch</h2>
         <p className='text-muted-foreground max-w-2xl mb-12'>
           Have a question or want to work together? Feel free to drop me a
-          message. I'd love to hear from you!
+          message. I\'d love to hear from you! {/* Escaped 'I'd' */}
         </p>
 
         <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
@@ -85,7 +81,8 @@ const ContactSection = () => {
                 Contact Information
               </h3>
               <p className='text-muted-foreground'>
-                Fill up the form and I'll get back to you as soon as possible.
+                Fill up the form and I\'ll get back to you as soon as possible.{' '}
+                {/* Escaped 'I'll' */}
               </p>
             </div>
 
