@@ -66,7 +66,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section id='contact' className='py-14 bg-background'>
+    <section id='contact' className='py-8 bg-background'>
       <div className='section-container'>
         <h2 className='section-heading'>Get In Touch</h2>
         <p className='text-muted-foreground max-w-2xl mb-12'>

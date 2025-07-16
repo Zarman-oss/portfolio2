@@ -58,7 +58,7 @@ const AchievementsSection = () => {
   };
 
   return (
-    <section id='achievements' className='pt-14 bg-background/50'>
+    <section id='achievements' className='pt-8 bg-background/50'>
       <div className='section-container'>
         <motion.div
           initial={{ opacity: 0, y: 20 }}

@@ -8,7 +8,7 @@ const HeroSection = () => {
   return (
     <section
       id='home'
-      className='min-h-screen flex items-center pt-16 relative overflow-hidden'
+      className='min-h-screen flex items-center pt-8 relative overflow-hidden'
     >
       <div className='absolute inset-0 -z-10 bg-background' />
 
