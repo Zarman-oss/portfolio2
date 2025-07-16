@@ -49,9 +49,9 @@ const Footer = () => {
                 <Mail size={20} />
               </a>
             </div>
-            <div className='text-gray-400 text-sm text-right'>
+            <span className='text-gray-400 text-sm text-right'>
               <p>© {currentYear} John Doe | Built with React and Tailwind</p>
-            </div>
+            </span>
           </div>
         </div>
       </div>

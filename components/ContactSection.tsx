@@ -6,6 +6,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Github, Linkedin, Mail, MapPin, Phone } from 'lucide-react';
 import { toast } from 'sonner';
 import { Links } from '@/data/links';
+import Link from 'next/link';
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -81,7 +82,7 @@ const ContactSection = () => {
                 Contact Information
               </h3>
               <p className='text-muted-foreground'>
-                Fill up the form and I &apos; ll get back to you as soon as
+                Fill up the form and I&apos;ll get back to you as soon as
                 possible.{' '}
               </p>
             </div>
@@ -92,7 +93,9 @@ const ContactSection = () => {
                 <div>
                   <h4 className='font-medium text-foreground'>Email</h4>
                   <p className='text-sm text-muted-foreground'>
-                    <a href={`mailto:${Links.emailonly}`}>{Links.emailonly}</a>
+                    <Link href={`mailto:${Links.emailonly}`}>
+                      {Links.emailonly}
+                    </Link>
                   </p>
                 </div>
               </div>
@@ -102,7 +105,7 @@ const ContactSection = () => {
                 <div>
                   <h4 className='font-medium text-foreground'>Phone</h4>
                   <p className='text-sm text-muted-foreground'>
-                    <a href={`tel:${Links.phone}`}>{Links.phone}</a>
+                    <Link href={`tel:${Links.phone}`}>{Links.phone}</Link>
                   </p>
                 </div>
               </div>
@@ -123,7 +126,7 @@ const ContactSection = () => {
                 Connect with me
               </h3>
               <div className='flex space-x-4'>
-                <a
+                <Link
                   href={Links.github}
                   target='_blank'
                   rel='noopener noreferrer'
@@ -131,8 +134,8 @@ const ContactSection = () => {
                   className='bg-muted p-3 rounded-full text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors'
                 >
                   <Github size={20} />
-                </a>
-                <a
+                </Link>
+                <Link
                   href={Links.linkedin}
                   target='_blank'
                   rel='noopener noreferrer'
@@ -140,8 +143,9 @@ const ContactSection = () => {
                   className='bg-muted p-3 rounded-full text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors'
                 >
                   <Linkedin size={20} />
-                </a>
-                <a
+                </Link>
+
+                <Link
                   href={Links.email}
                   target='_blank'
                   rel='noopener noreferrer'
@@ -149,7 +153,7 @@ const ContactSection = () => {
                   className='bg-muted p-3 rounded-full text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors'
                 >
                   <Mail size={20} />
-                </a>
+                </Link>
               </div>
             </div>
           </div>

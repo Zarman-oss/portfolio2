@@ -203,7 +203,7 @@ const HeroSection = () => {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 1.4 }}
                 >
-                  <span className='text-secondary'>name</span>:{' '}
+                  <span className='text-pink'>name</span>:{' '}
                   <span className='text-green-500'>John Doe</span>,
                 </motion.div>
 
@@ -213,7 +213,7 @@ const HeroSection = () => {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 1.6 }}
                 >
-                  <span className='text-secondary'>skills</span>:{' '}
+                  <span className='text-pink'>skills</span>:{' '}
                   <span className='text-orange-500'>[</span>
                   <span className='text-green-500'>React</span>,{' '}
                   <span className='text-green-500'>Node.js</span>,{' '}
@@ -227,7 +227,7 @@ const HeroSection = () => {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 1.8 }}
                 >
-                  <span className='text-secondary'>focuses</span>:{' '}
+                  <span className='text-pink'>focuses</span>:{' '}
                   <span className='text-orange-500'>[</span>
                   <span className='text-green-500'>Full-Stack</span>,{' '}
                   <span className='text-green-500'>UI/UX</span>
@@ -240,7 +240,7 @@ const HeroSection = () => {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 2.0 }}
                 >
-                  <span className='text-secondary'>learning</span>:{' '}
+                  <span className='text-pink'>learning</span>:{' '}
                   <span className='text-green-500'>Always</span>
                 </motion.div>
 
