@@ -1,7 +1,7 @@
 'use client';
 import { Button } from '@/components/ui/button';
 import { Github, Linkedin, Mail } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 import { Links } from '@/data/links';
 
 const HeroSection = () => {
@@ -204,7 +204,7 @@ const HeroSection = () => {
                   transition={{ delay: 1.4 }}
                 >
                   <span className='text-secondary'>name</span>:{' '}
-                  <span className='text-green-500'>'John Doe'</span>,
+                  <span className='text-green-500'>John Doe</span>,
                 </motion.div>
 
                 <motion.div
@@ -215,9 +215,9 @@ const HeroSection = () => {
                 >
                   <span className='text-secondary'>skills</span>:{' '}
                   <span className='text-orange-500'>[</span>
-                  <span className='text-green-500'>'React'</span>,{' '}
-                  <span className='text-green-500'>'Node.js'</span>,{' '}
-                  <span className='text-green-500'>'Python'</span>
+                  <span className='text-green-500'>React</span>,{' '}
+                  <span className='text-green-500'>Node.js</span>,{' '}
+                  <span className='text-green-500'>Python</span>
                   <span className='text-orange-500'>]</span>,
                 </motion.div>
 
@@ -229,8 +229,8 @@ const HeroSection = () => {
                 >
                   <span className='text-secondary'>focuses</span>:{' '}
                   <span className='text-orange-500'>[</span>
-                  <span className='text-green-500'>'Full-Stack'</span>,{' '}
-                  <span className='text-green-500'>'UI/UX'</span>
+                  <span className='text-green-500'>Full-Stack</span>,{' '}
+                  <span className='text-green-500'>UI/UX</span>
                   <span className='text-orange-500'>]</span>,
                 </motion.div>
 
@@ -241,7 +241,7 @@ const HeroSection = () => {
                   transition={{ delay: 2.0 }}
                 >
                   <span className='text-secondary'>learning</span>:{' '}
-                  <span className='text-green-500'>'Always'</span>
+                  <span className='text-green-500'>Always</span>
                 </motion.div>
 
                 <div>
