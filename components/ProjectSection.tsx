@@ -36,11 +36,12 @@ const ProjectsSection = () => {
               <div className='h-48 bg-muted relative overflow-hidden'>
                 {/* Replace img with LazyImage */}
                 <Image
-                  width={0}
-                  height={0}
-                  className='w-full h-48 object-cover'
                   src={project.image}
                   alt={project.title}
+                  fill
+                  className='object-cover'
+                  sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+                  priority={index < 3}
                 />
                 <div className='absolute inset-0 bg-primary/20 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity'>
                   <div className='flex space-x-4'>

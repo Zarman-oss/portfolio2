@@ -1,7 +1,7 @@
 'use client';
 import { Button } from '@/components/ui/button';
 import { Github, Linkedin, Mail } from 'lucide-react';
-import { motion } from 'motion/react';
+import { motion } from 'framer-motion';
 import { Links } from '@/data/links';
 
 const HeroSection = () => {
@@ -10,28 +10,16 @@ const HeroSection = () => {
       id='home'
       className='min-h-screen flex items-center pt-16 relative overflow-hidden'
     >
-      <div className='absolute inset-0 -z-10 bg-gradient-to-br from-blue-50 via-white to-indigo-50 opacity-70'></div>
+      <div className='absolute inset-0 -z-10 bg-background' />
 
-      {/* Animated background elements */}
       <motion.div
-        className='absolute top-1/4 right-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl'
-        animate={{
-          scale: [1, 1.1, 1],
-          opacity: [0.5, 0.7, 0.5],
-        }}
-        transition={{
-          duration: 8,
-          repeat: Infinity,
-          repeatType: 'reverse',
-        }}
+        className='absolute top-1/4 right-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl'
+        animate={{ scale: [1, 1.1, 1], opacity: [0.5, 0.7, 0.5] }}
+        transition={{ duration: 8, repeat: Infinity, repeatType: 'reverse' }}
       />
-
       <motion.div
-        className='absolute bottom-1/4 left-1/4 w-64 h-64 bg-blue-400/5 rounded-full blur-3xl'
-        animate={{
-          scale: [1, 1.2, 1],
-          opacity: [0.3, 0.5, 0.3],
-        }}
+        className='absolute bottom-1/4 left-1/4 w-64 h-64 bg-primary/10 rounded-full blur-3xl'
+        animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }}
         transition={{
           duration: 10,
           repeat: Infinity,
@@ -40,7 +28,9 @@ const HeroSection = () => {
         }}
       />
 
+      {/* Content */}
       <div className='section-container flex flex-col lg:flex-row items-center justify-between gap-10'>
+        {/* Left Text */}
         <div className='flex flex-col max-w-xl space-y-6 text-center lg:text-left'>
           <motion.span
             className='text-sm md:text-base font-medium text-primary opacity-90'
@@ -48,11 +38,11 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            Hello! I &apos m
+            Hello! I&apos;m
           </motion.span>
 
           <motion.h1
-            className='text-4xl md:text-5xl lg:text-6xl font-bold'
+            className='text-4xl md:text-5xl lg:text-6xl font-bold text-foreground'
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
@@ -87,6 +77,7 @@ const HeroSection = () => {
             technologies.
           </motion.p>
 
+          {/* Buttons + Social */}
           <motion.div
             className='flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 relative z-10'
             initial={{ opacity: 0, y: 20 }}
@@ -94,11 +85,9 @@ const HeroSection = () => {
             transition={{ duration: 0.6, delay: 1 }}
           >
             <motion.div className='flex flex-row items-center gap-4'>
-              {/* Contact Button */}
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className='touch-target'
               >
                 <a href='#contact' aria-label='Go to contact section'>
                   <Button className='min-w-[120px] py-3 text-base'>
@@ -107,11 +96,9 @@ const HeroSection = () => {
                 </a>
               </motion.div>
 
-              {/* Projects Button */}
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className='touch-target'
               >
                 <a href='#projects' aria-label='Go to projects section'>
                   <Button
@@ -136,7 +123,7 @@ const HeroSection = () => {
                   href={social.link}
                   target='_blank'
                   rel='noopener noreferrer'
-                  className='text-gray-600 hover:text-primary transition-colors p-2'
+                  className='text-muted-foreground hover:text-primary transition-colors p-2'
                   whileHover={{ scale: 1.2, rotate: 5 }}
                   whileTap={{ scale: 0.9 }}
                   aria-label={social.label}
@@ -148,6 +135,7 @@ const HeroSection = () => {
           </motion.div>
         </div>
 
+        {/* Code block */}
         <motion.div
           className='w-full max-w-md'
           initial={{ opacity: 0, x: 50 }}
@@ -161,7 +149,7 @@ const HeroSection = () => {
         >
           <div className='relative'>
             <motion.div
-              className='absolute inset-0 bg-gradient-to-tr from-primary/20 to-primary/5 rounded-2xl'
+              className='absolute inset-0 bg-primary/10 rounded-2xl'
               animate={{ rotate: [0, 6, 0] }}
               transition={{
                 duration: 6,
@@ -170,9 +158,8 @@ const HeroSection = () => {
                 ease: 'easeInOut',
               }}
             />
-
             <motion.div
-              className='relative bg-codebg border border-gray-200 p-6 rounded-2xl shadow-sm'
+              className='relative bg-card border border-border p-6 rounded-2xl shadow-sm text-foreground'
               whileHover={{
                 y: -5,
                 boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.1)',
@@ -194,77 +181,72 @@ const HeroSection = () => {
                     whileHover={{ scale: 1.2 }}
                   />
                 </div>
-                <div className='text-xs text-gray-500'>developer.js</div>
+                <div className='text-xs text-muted-foreground'>
+                  developer.js
+                </div>
               </div>
 
               <div className='space-y-2 font-mono text-sm'>
-                <div className='text-gray-500'>{'// Software Engineer'}</div>
+                <div className='text-muted-foreground'>
+                  {'// Software Engineer'}
+                </div>
                 <div>
-                  <span className='text-pink-600'>const</span>{' '}
-                  <span className='text-blue-600'>developer</span>{' '}
-                  <span className='text-gray-500'>=</span>{' '}
+                  <span className='text-pink-500'>const</span>{' '}
+                  <span className='text-primary'>developer</span>{' '}
+                  <span className='text-muted-foreground'>=</span>{' '}
                   <span className='text-orange-500'>{'{'}</span>
                 </div>
+
                 <motion.div
                   className='pl-6'
                   initial={{ opacity: 0, x: -10 }}
                   animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 1.4, duration: 0.3 }}
+                  transition={{ delay: 1.4 }}
                 >
-                  <span className='text-purple-600'>name</span>
-                  <span className='text-gray-500'>:</span>{' '}
-                  <span className='text-green-600'>{'John Doe'}</span>
-                  <span className='text-gray-500'>,</span>
+                  <span className='text-secondary'>name</span>:{' '}
+                  <span className='text-green-500'>'John Doe'</span>,
                 </motion.div>
 
                 <motion.div
                   className='pl-6'
                   initial={{ opacity: 0, x: -10 }}
                   animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 1.6, duration: 0.3 }}
+                  transition={{ delay: 1.6 }}
                 >
-                  <span className='text-purple-600'>skills</span>
-                  <span className='text-gray-500'>:</span>{' '}
+                  <span className='text-secondary'>skills</span>:{' '}
                   <span className='text-orange-500'>[</span>
-                  <span className='text-green-600'>{'React'}</span>
-                  <span className='text-gray-500'>,</span>{' '}
-                  <span className='text-green-600'>{'Node.js'}</span>
-                  <span className='text-gray-500'>,</span>{' '}
-                  <span className='text-green-600'>{'Python'}</span>
-                  <span className='text-orange-500'>]</span>
-                  <span className='text-gray-500'>,</span>
+                  <span className='text-green-500'>'React'</span>,{' '}
+                  <span className='text-green-500'>'Node.js'</span>,{' '}
+                  <span className='text-green-500'>'Python'</span>
+                  <span className='text-orange-500'>]</span>,
                 </motion.div>
 
                 <motion.div
                   className='pl-6'
                   initial={{ opacity: 0, x: -10 }}
                   animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 1.8, duration: 0.3 }}
+                  transition={{ delay: 1.8 }}
                 >
-                  <span className='text-purple-600'>focuses</span>
-                  <span className='text-gray-500'>:</span>{' '}
+                  <span className='text-secondary'>focuses</span>:{' '}
                   <span className='text-orange-500'>[</span>
-                  <span className='text-green-600'>{'Full-Stack'}</span>
-                  <span className='text-gray-500'>,</span>{' '}
-                  <span className='text-green-600'>{'UI/UX'}</span>
-                  <span className='text-orange-500'>]</span>
-                  <span className='text-gray-500'>,</span>
+                  <span className='text-green-500'>'Full-Stack'</span>,{' '}
+                  <span className='text-green-500'>'UI/UX'</span>
+                  <span className='text-orange-500'>]</span>,
                 </motion.div>
 
                 <motion.div
                   className='pl-6'
                   initial={{ opacity: 0, x: -10 }}
                   animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 2.0, duration: 0.3 }}
+                  transition={{ delay: 2.0 }}
                 >
-                  <span className='text-purple-600'>learning</span>
-                  <span className='text-gray-500'>:</span>{' '}
-                  <span className='text-green-600'>{'Always'}</span>
+                  <span className='text-secondary'>learning</span>:{' '}
+                  <span className='text-green-500'>'Always'</span>
                 </motion.div>
 
                 <div>
                   <span className='text-orange-500'>{'}'}</span>
-                  <span className='text-gray-500'>;</span>
+                  <span className='text-muted-foreground'>;</span>
                 </div>
               </div>
             </motion.div>

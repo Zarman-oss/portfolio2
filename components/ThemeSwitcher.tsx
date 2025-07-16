@@ -1,6 +1,4 @@
-import { useTheme } from 'next-themes';
 import { Button } from '@/components/ui/button';
-import { Moon, Sun, Palette } from 'lucide-react';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -8,9 +6,19 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import { motion } from 'framer-motion';
+import { Moon, Palette, Sun } from 'lucide-react';
+import { useTheme } from 'next-themes';
+import { useEffect } from 'react';
 
 const ThemeSwitcher = () => {
+  // inside ThemeSwitcher
+
   const { theme, setTheme } = useTheme();
+
+  useEffect(() => {
+    document.documentElement.classList.remove('light', 'dark', 'purple');
+    document.documentElement.classList.add(theme ?? 'light');
+  }, [theme]);
 
   const themes = [
     {
