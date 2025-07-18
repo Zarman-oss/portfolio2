@@ -10,15 +10,17 @@ const HeroSection = () => {
       id='home'
       className='min-h-screen flex items-center pt-8 relative overflow-hidden'
     >
-      <div className='absolute inset-0 -z-10 bg-background' />
+      {/* <span className='absolute inset-0 -z-10 bg-background' /> */}
+
+      <span className='absolute inset-0 -z-10 bg-background'></span>
 
       <motion.div
-        className='absolute top-1/4 right-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl'
+        className='absolute top-1/4 right-1/4 w-96 h-96 bg-primary/10 rounded-full blur-xl'
         animate={{ scale: [1, 1.1, 1], opacity: [0.5, 0.7, 0.5] }}
-        transition={{ duration: 8, repeat: Infinity, repeatType: 'reverse' }}
+        transition={{ duration: 5, repeat: Infinity, repeatType: 'reverse' }}
       />
       <motion.div
-        className='absolute bottom-1/4 left-1/4 w-64 h-64 bg-primary/10 rounded-full blur-3xl'
+        className='absolute bottom-1/4 left-1/4 w-64 h-64 bg-primary/10 rounded-full blur-xl'
         animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }}
         transition={{
           duration: 10,
